@@ -1,0 +1,74 @@
+{
+  "name": "no_temporal_s2",
+  "config": {
+    "data": "data/nsfnet.npz",
+    "unseen": "data/random.npz",
+    "name": "no_temporal_s2",
+    "epochs": 15,
+    "bs": 64,
+    "lr": 0.002,
+    "hidden": 64,
+    "tasks": "forecast,root,impact",
+    "no_graph": false,
+    "no_temporal": true,
+    "seed": 2
+  },
+  "test": {
+    "forecast": {
+      "f1": 0.5224006762468301,
+      "auroc": 0.8534553130173045,
+      "auprc": 0.5509221415307116,
+      "threshold": 0.5499999999999999,
+      "events": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.34375,
+      "primary_auroc": 0.9301809539571602,
+      "primary_auprc": 0.8263518218637232,
+      "primary_recall": 0.7512953367875648,
+      "cascade_auroc": 0.8989185238606449,
+      "cascade_auprc": 0.1438419432931807,
+      "cascade_recall": 0.05466237942122187
+    },
+    "root": {
+      "top1": 0.8549222797927462,
+      "top3": 0.9015544041450777,
+      "samples": 193
+    },
+    "impact": {
+      "f1": 0.5166346769033909,
+      "jaccard": 0.3294297481281389,
+      "auprc": 0.5607844376790976,
+      "threshold": 0.5499999999999999
+    }
+  },
+  "unseen_topology": {
+    "forecast": {
+      "f1": 0.5124527570501017,
+      "auroc": 0.8504528327612175,
+      "auprc": 0.5026798427603386,
+      "threshold": 0.5499999999999999,
+      "events": 114,
+      "detected": 111,
+      "detection_rate": 0.9736842105263158,
+      "mean_lead_min": 4.2657657657657655,
+      "primary_auroc": 0.9491104055566336,
+      "primary_auprc": 0.8326705148617058,
+      "primary_recall": 0.7983792544570503,
+      "cascade_auroc": 0.850915284602561,
+      "cascade_auprc": 0.09203516703812029,
+      "cascade_recall": 0.05091514143094842
+    },
+    "root": {
+      "top1": 0.8764510779436152,
+      "top3": 0.9311774461028193,
+      "samples": 1206
+    },
+    "impact": {
+      "f1": 0.521899466696925,
+      "jaccard": 0.2829513427274235,
+      "auprc": 0.5260817981834938,
+      "threshold": 0.5499999999999999
+    }
+  }
+}

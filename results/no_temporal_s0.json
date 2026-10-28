@@ -1,0 +1,74 @@
+{
+  "name": "no_temporal_s0",
+  "config": {
+    "data": "data/nsfnet.npz",
+    "unseen": "data/random.npz",
+    "name": "no_temporal_s0",
+    "epochs": 15,
+    "bs": 64,
+    "lr": 0.002,
+    "hidden": 64,
+    "tasks": "forecast,root,impact",
+    "no_graph": false,
+    "no_temporal": true,
+    "seed": 0
+  },
+  "test": {
+    "forecast": {
+      "f1": 0.5370517928286852,
+      "auroc": 0.8319838363983245,
+      "auprc": 0.5202156138506595,
+      "threshold": 0.49999999999999994,
+      "events": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.5,
+      "primary_auroc": 0.925404595698655,
+      "primary_auprc": 0.8082510322295204,
+      "primary_recall": 0.7694300518134715,
+      "cascade_auroc": 0.8609518397657387,
+      "cascade_auprc": 0.11502309701787682,
+      "cascade_recall": 0.1157556270096463
+    },
+    "root": {
+      "top1": 0.8082901554404145,
+      "top3": 0.9326424870466321,
+      "samples": 193
+    },
+    "impact": {
+      "f1": 0.5395235927780306,
+      "jaccard": 0.3413335433115733,
+      "auprc": 0.5376410057989122,
+      "threshold": 0.49999999999999994
+    }
+  },
+  "unseen_topology": {
+    "forecast": {
+      "f1": 0.5075962187711006,
+      "auroc": 0.8358623068389631,
+      "auprc": 0.4943444479374183,
+      "threshold": 0.49999999999999994,
+      "events": 114,
+      "detected": 114,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.368421052631579,
+      "primary_auroc": 0.9480281856020532,
+      "primary_auprc": 0.8257567294750937,
+      "primary_recall": 0.8275526742301459,
+      "cascade_auroc": 0.8159394582260622,
+      "cascade_auprc": 0.08861336362774078,
+      "cascade_recall": 0.14309484193011648
+    },
+    "root": {
+      "top1": 0.8640132669983416,
+      "top3": 0.9270315091210614,
+      "samples": 1206
+    },
+    "impact": {
+      "f1": 0.5169927363342347,
+      "jaccard": 0.2732359531657521,
+      "auprc": 0.5125473712392838,
+      "threshold": 0.49999999999999994
+    }
+  }
+}

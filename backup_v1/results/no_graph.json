@@ -1,0 +1,62 @@
+{
+  "name": "no_graph",
+  "config": {
+    "data": "data/nsfnet.npz",
+    "unseen": "data/random.npz",
+    "name": "no_graph",
+    "epochs": 15,
+    "bs": 64,
+    "lr": 0.002,
+    "hidden": 64,
+    "tasks": "forecast,root,impact",
+    "no_graph": true,
+    "no_temporal": false,
+    "seed": 0
+  },
+  "test": {
+    "forecast": {
+      "f1": 0.6593233674272226,
+      "auroc": 0.8894711027961055,
+      "auprc": 0.661236473613112,
+      "threshold": 0.5499999999999999,
+      "events": 17,
+      "detected": 17,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.4411764705882355
+    },
+    "root": {
+      "top1": 0.7272727272727273,
+      "top3": 0.8325358851674641,
+      "samples": 209
+    },
+    "impact": {
+      "f1": 0.7016706443914081,
+      "jaccard": 0.5262534260197255,
+      "auprc": 0.7229967722107009,
+      "threshold": 0.5499999999999999
+    }
+  },
+  "unseen_topology": {
+    "forecast": {
+      "f1": 0.5701964542405367,
+      "auroc": 0.830248098819568,
+      "auprc": 0.5243775966399602,
+      "threshold": 0.5499999999999999,
+      "events": 30,
+      "detected": 30,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.5
+    },
+    "root": {
+      "top1": 0.7897897897897898,
+      "top3": 0.8648648648648649,
+      "samples": 333
+    },
+    "impact": {
+      "f1": 0.6277353018718692,
+      "jaccard": 0.40336876983170933,
+      "auprc": 0.6159375569564912,
+      "threshold": 0.5499999999999999
+    }
+  }
+}

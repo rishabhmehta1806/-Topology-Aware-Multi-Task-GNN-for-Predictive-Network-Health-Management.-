@@ -1,0 +1,74 @@
+{
+  "name": "no_temporal_s1",
+  "config": {
+    "data": "data/nsfnet.npz",
+    "unseen": "data/random.npz",
+    "name": "no_temporal_s1",
+    "epochs": 15,
+    "bs": 64,
+    "lr": 0.002,
+    "hidden": 64,
+    "tasks": "forecast,root,impact",
+    "no_graph": false,
+    "no_temporal": true,
+    "seed": 1
+  },
+  "test": {
+    "forecast": {
+      "f1": 0.5191986644407346,
+      "auroc": 0.8591598987398921,
+      "auprc": 0.5214967222204688,
+      "threshold": 0.49999999999999994,
+      "events": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.40625,
+      "primary_auroc": 0.9365506821575609,
+      "primary_auprc": 0.8199907675448003,
+      "primary_recall": 0.7694300518134715,
+      "cascade_auroc": 0.9081450887958208,
+      "cascade_auprc": 0.09718438982872628,
+      "cascade_recall": 0.03215434083601286
+    },
+    "root": {
+      "top1": 0.8238341968911918,
+      "top3": 0.9119170984455959,
+      "samples": 193
+    },
+    "impact": {
+      "f1": 0.5038242473555736,
+      "jaccard": 0.32709933943663144,
+      "auprc": 0.5206398921734534,
+      "threshold": 0.49999999999999994
+    }
+  },
+  "unseen_topology": {
+    "forecast": {
+      "f1": 0.5128695818581954,
+      "auroc": 0.8429355373896228,
+      "auprc": 0.49244347158329804,
+      "threshold": 0.49999999999999994,
+      "events": 114,
+      "detected": 114,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.37719298245614,
+      "primary_auroc": 0.9493887224007269,
+      "primary_auprc": 0.8421609526088337,
+      "primary_recall": 0.8239870340356564,
+      "cascade_auroc": 0.8325171705331125,
+      "cascade_auprc": 0.07240284049646861,
+      "cascade_recall": 0.04026622296173045
+    },
+    "root": {
+      "top1": 0.8814262023217247,
+      "top3": 0.9378109452736318,
+      "samples": 1206
+    },
+    "impact": {
+      "f1": 0.5035687774795866,
+      "jaccard": 0.26822980547217096,
+      "auprc": 0.5067300684814285,
+      "threshold": 0.49999999999999994
+    }
+  }
+}

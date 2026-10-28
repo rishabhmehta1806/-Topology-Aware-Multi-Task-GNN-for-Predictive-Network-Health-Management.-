@@ -1,0 +1,74 @@
+{
+  "name": "no_graph_s1",
+  "config": {
+    "data": "data/nsfnet.npz",
+    "unseen": "data/random.npz",
+    "name": "no_graph_s1",
+    "epochs": 15,
+    "bs": 64,
+    "lr": 0.002,
+    "hidden": 64,
+    "tasks": "forecast,root,impact",
+    "no_graph": true,
+    "no_temporal": false,
+    "seed": 1
+  },
+  "test": {
+    "forecast": {
+      "f1": 0.5481239804241436,
+      "auroc": 0.8000761987640974,
+      "auprc": 0.5131754655496861,
+      "threshold": 0.44999999999999996,
+      "events": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.4375,
+      "primary_auroc": 0.9299563649449523,
+      "primary_auprc": 0.8479642760558145,
+      "primary_recall": 0.805699481865285,
+      "cascade_auroc": 0.7981622713864333,
+      "cascade_auprc": 0.08522938275551313,
+      "cascade_recall": 0.06430868167202572
+    },
+    "root": {
+      "top1": 0.5595854922279793,
+      "top3": 0.6476683937823834,
+      "samples": 193
+    },
+    "impact": {
+      "f1": 0.5777126099706745,
+      "jaccard": 0.37458375199784516,
+      "auprc": 0.5570069022978225,
+      "threshold": 0.35
+    }
+  },
+  "unseen_topology": {
+    "forecast": {
+      "f1": 0.534703885326292,
+      "auroc": 0.7758249424896253,
+      "auprc": 0.46750233282992876,
+      "threshold": 0.44999999999999996,
+      "events": 114,
+      "detected": 114,
+      "detection_rate": 1.0,
+      "mean_lead_min": 4.4298245614035086,
+      "primary_auroc": 0.9476466330999513,
+      "primary_auprc": 0.8460886800026169,
+      "primary_recall": 0.8327390599675851,
+      "cascade_auroc": 0.6742210090141796,
+      "cascade_auprc": 0.049241980133439944,
+      "cascade_recall": 0.06888519134775374
+    },
+    "root": {
+      "top1": 0.39303482587064675,
+      "top3": 0.5140961857379768,
+      "samples": 1206
+    },
+    "impact": {
+      "f1": 0.5430783361763548,
+      "jaccard": 0.32058934559164187,
+      "auprc": 0.5032113574699186,
+      "threshold": 0.35
+    }
+  }
+}
